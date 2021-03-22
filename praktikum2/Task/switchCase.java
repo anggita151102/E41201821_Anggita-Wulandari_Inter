@@ -8,7 +8,6 @@ package praktikum2;
 import java.util.Scanner;
 
 public class switchCase {
-    private static Scanner Scanner;
     
     public static void main(String[] args) {
         String pembeli,menu;
@@ -30,28 +29,31 @@ public class switchCase {
         
         
         menu = input.nextLine();
-        switch (menu){
+        String pilihan = " ";
+        
+        switch (pilihan){
             case "1":    
-                System.out.println("Minuman yang anda pesan adalah : Soft drinks");
+                pilihan = ("Soft drinks");
                 break;
             case "2":    
-                System.out.println("Minuman yang anda pesan adalah : Mix Juice");
+                pilihan = ("Juice");
                 break;
             case "3":
-                System.out.println("Minuman yang anda pesan adalah : Nescafe");
+                pilihan = ("Nescafe");
                 break;
             case "4":
-                System.out.println("Minuman yang anda pesan adalah : Soda milk");
+                pilihan = ("Soda milk");
                 break;
              case "5":
-                System.out.println("Minuman yang anda pesan adalah : Tea");
+                pilihan = ("Tea");
                 break;    
             default:
-                System.out.println("Mohon pilih dengan benar!");                                                                                           
+                pilihan = ("Pilihan anda tidak tersedia dimenu!");                                                                                           
         }
         
+        System.out.println("Minuman yang anda pesan adalah : " + pilihan);
         System.out.println("Pesanan akan segera kami antar");                                        
-                System.out.println("Terima Kasih " + pembeli + " telah berkunjung diCafe Ceria");
+        System.out.println("Terima Kasih " + pembeli + " telah berkunjung diCafe Ceria");
     
                 
     }
