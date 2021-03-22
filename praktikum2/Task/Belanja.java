@@ -9,11 +9,9 @@ import java.util.Scanner;
 
 public class Belanja {
     public static void main(String[] args) {
-        String pembeli;
+        
 
         Scanner input = new Scanner(System.in);
-        int Jumlah = 0;
-
         
         System.out.println("---------------------------------------------");
         System.out.println("     Kharisma Agung Plaza < KAP >    ");
@@ -22,26 +20,32 @@ public class Belanja {
         System.out.println("    Dengan harga minimum Rp 10000,00" );
         System.out.println("---------------------------------------------");
         System.out.print("Masukkan nama pembeli : ");
-        pembeli = input.nextLine();
-        System.out.println();
-
-        for (int i = 1; i <= 5; i++) {
-            System.out.print("Masukkan harga barang ke-" + i + "      : ");
-            Jumlah = Jumlah+ input.nextInt();
+        String customer = input.nextLine();
+        
+        int[] barang = new int[5];
+        int Jumlah = 0;
+        for (int i = 0; i < barang.length; i++) {
+            System.out.print("Masukan harga barang ke-" + (i + 1) + " : ");
+            barang[i] = input.nextInt();
+            Jumlah = Jumlah + barang[i];
         }
         
               
-        System.out.println("Total pembelian atas nama " + pembeli + " adalah Rp " + Jumlah ); 
-        if (Jumlah < 10000){       
+        System.out.println("Total pembelian atas nama " + customer + " adalah Rp " + Jumlah ); 
+        
+        boolean Promo = false;
+        for (int i = 0; i < barang.length; i++) {
+            Promo = barang[i] >= 10000;
+        }
+        if (Promo == true){       
+            System.out.println("\nSelamat...");
+            System.out.println("Anda mendapat hadiah 1 buah mug cantik\n");
             System.out.println("---------------------------------------------");
-        System.out.println(("                Terima Kasih"             ));
-        System.out.println(("Anda sudah berbelanja di Kharisma Agung Plaza"));
+            System.out.println(("                Terima Kasih"             ));
+            System.out.println(("Anda sudah berbelanja di Kharisma Agung Plaza"));
         } else {
-        System.out.println("\nSelamat...");
-        System.out.println("Anda mendapat hadiah 1 buah mug cantik\n");
-        System.out.println("---------------------------------------------");
-        System.out.println(("                Terima Kasih"             ));
-        System.out.println(("Anda sudah berbelanja di Kharisma Agung Plaza"));
+            System.out.println(("                Terima Kasih"             ));
+            System.out.println(("Anda sudah berbelanja di Kharisma Agung Plaza"));
     }
     }
     
