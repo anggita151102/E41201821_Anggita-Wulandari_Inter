@@ -32,12 +32,17 @@ public class Belanja {
         
               
         System.out.println("Total pembelian atas nama " + pembeli + " adalah Rp " + Jumlah ); 
-         if (Jumlah > 10000){
+        if (Jumlah < 10000){       
+            System.out.println("---------------------------------------------");
+        System.out.println(("                Terima Kasih"             ));
+        System.out.println(("Anda sudah berbelanja di Kharisma Agung Plaza"));
+        } else {
         System.out.println("\nSelamat...");
         System.out.println("Anda mendapat hadiah 1 buah mug cantik\n");
-         }
         System.out.println("---------------------------------------------");
         System.out.println(("                Terima Kasih"             ));
         System.out.println(("Anda sudah berbelanja di Kharisma Agung Plaza"));
     }
+    }
+    
 }
