@@ -31,7 +31,7 @@ public class switchCase {
         menu = input.nextLine();
         String pilihan = " ";
         
-        switch (pilihan){
+        switch (menu){
             case "1":    
                 pilihan = ("Soft drinks");
                 break;
