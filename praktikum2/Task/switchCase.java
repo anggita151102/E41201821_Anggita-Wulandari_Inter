@@ -36,7 +36,7 @@ public class switchCase {
                 pilihan = ("Soft drinks");
                 break;
             case "2":    
-                pilihan = ("Juice");
+                pilihan = ("Mix Juice");
                 break;
             case "3":
                 pilihan = ("Nescafe");
