@@ -13,8 +13,9 @@ public class ArrayNama {
     public static void main(String[] args) {
         String[] mahasiswa = {"Anggita", "Wulandari"};
         
+        System.out.print("Nama : ");
         for (int i = 0; i<mahasiswa.length;i++){
-            System.out.print("Nama: " +mahasiswa[i]);
+            System.out.print("mahasiswa[i]);
             System.out.print("  ");
     }
     }
